@@ -130,8 +130,7 @@ $apiKey     = "your_openweathermap_api_key";
 ## 👩‍💻 Author
 
 **M. S. Priyalakshi**  
-Student ID: 2502339  
-Module: 4CS017  
+ 
 
 ---
 
