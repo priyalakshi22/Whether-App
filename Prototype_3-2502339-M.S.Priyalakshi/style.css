@@ -1,0 +1,57 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    text-align: center;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    color: black;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.weather-card {
+    display: inline-block;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    color: azure;
+    background-color: navy;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card h1 {
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card p {
+    margin-bottom: 5px;
+}
