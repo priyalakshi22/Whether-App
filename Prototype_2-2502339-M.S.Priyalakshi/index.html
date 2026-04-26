@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+</head>
+<body background="sky.gif" style="background-size:100%;">
+    <div class="container">
+        <h1>Today's Weather Forecast</h1>
+        <div>
+            <input type="text" id="city-input" placeholder="Search city or country">
+            <button onclick="getWeather()">SUBMIT</button>
+        </div>
+
+        <center><div class="weather-card" id="weather-card" style="display: none;">
+            <h1><i><b>Weather Information</b></i></h1>
+            <p id="weather-description">Please wait...</p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p>
+        </div>
+    </div></center>
+
+    <script src="script.js"></script>
+</body>
+</html>
