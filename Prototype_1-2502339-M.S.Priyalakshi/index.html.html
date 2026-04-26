@@ -1,0 +1,83 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            text-align: center;
+            color:black;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 50px;
+        }
+
+        
+
+        
+        .weather-card {
+            display: inline-block;
+            width: 400px;
+            margin: 30px;
+            padding: 20px;
+            color:azure;
+            background-color:navy;
+            border-radius: 10px;
+
+        }
+
+        .weather-card h1 {
+            margin-bottom: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .weather-card p {
+            margin-bottom: 5px;
+
+        }
+</style>
+</head>
+<body>
+<body background="sky.gif" style="background-size:100%;>
+ <div class="container">
+
+        <h1>Today's Weather Forecast</h1>
+        
+
+        <div class="weather-card">
+            <h1 class="header"><i><b>Weather Information</b></i></h2>
+            <b></b><p id="weather-description">Please wait...</p>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="wind-speed"></p></div></b>
+        </div>
+    </div>
+
+    <script>
+        
+        fetch('https://api.openweathermap.org/data/2.5/weather?q=kandy&appid=ceaea8ad2252b2063b2f85142bc45d7f&units=metric') // Added &units=metric for Celsius
+            .then(response => response.json())
+            .then(response => {
+                console.log(response);
+
+                
+                document.getElementById("weather-description").innerHTML = "Description: " + response.weather[0].description;
+                document.getElementById("temperature").innerHTML = "Temperature: " + response.main.temp + " °C";
+                document.getElementById("humidity").innerHTML = "Humidity: " + response.main.humidity + "%";
+                document.getElementById("wind-speed").innerHTML = "Wind Speed: " + response.wind.speed + " m/s";
+            })
+            .catch(err => {
+                console.log(err);
+            });
+    </script>
+</body>
+</html>
